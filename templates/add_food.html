@@ -7,7 +7,7 @@
 
     <title>Food Tracker | Add Food</title>
     <link href="{{ url_for('static', filename='/css/theme.css') }}" rel="stylesheet">
-
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 
 <body>
@@ -34,41 +34,48 @@
         </div>
     </div>
 </nav>
-
-<div class="container d-flex justify-content-center">
-    <div class="card d-inline-flex m-5">
-        <div class="card-header">
-            <h3 class="panel-title">January 28, 2017</h3>
-        </div>
-        <div class="card-body">
-            <form class="form-add-food" method="POST" action="/">
-                <div class="form-group my-3">
-                    <label for="food-name">Food Name</label>
-                    <input type="text" class="form-control" id="food-name" placeholder="Food Name">
+<div class="container">
+    <div class="row">
+        <div class="col col-lg-8 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="panel-title">January 28, 2017</h3>
                 </div>
-                <div class="form-group my-3">
-                    <label for="protein">Protein</label>
-                    <input type="number" class="form-control" id="protein" placeholder="Protein">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="foodName" class="form-label">Food Name</label>
+                            <input class="form-control" id="foodName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="protein" class="form-label">Protein</label>
+                            <input type="number" class="form-control" id="protein">
+                        </div>
+                        <div class="mb-3">
+                            <label for="carbohydrates" class="form-label">Carbohydrates</label>
+                            <input type="number" class="form-control" id="carbohydrates">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fat" class="form-label">Fat</label>
+                            <input type="number" class="form-control" id="fat">
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                            <button class="btn btn-primary text-light text-uppercase" type="submit">Add</button>
+                        </div>
+                    </form>
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <ul class="nav">
+                                <li class="active"><a><span class="badge bg-secondary">Pizza</span></a></li>
+                                <li><a>Protein: <span class="badge rounded-pill bg-danger">100</span></a></li>
+                                <li><a>Carbohydates: <span class="badge rounded-pill bg-success">100</span></a></li>
+                                <li><a>Fat: <span class="badge rounded-pill bg-warning">50</span></a></li>
+                                <li><a>Calories: <span class="badge rounded-pill bg-secondary">200</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group my-3">
-                    <label for="carbohydrates">Carbohydrates</label>
-                    <input type="number" class="form-control" id="carbohydrates" placeholder="Carbohydrates">
-                </div>
-                <div class="form-group my-3">
-                    <label for="fat">Fat</label>
-                    <input type="number" class="form-control" id="fat" placeholder="Fat">
-                </div>
-                <div class="d-grid gap-2">
-                    <button class="btn btn-primary my-4 text-light" type="submit">Add</button>
-                </div>
-            </form>
-            <ul class="nav">
-                <li class="active"><a><span class="badge bg-secondary">Pizza</span></a></li>
-                <li><a>Protein: <span class="badge rounded-pill bg-danger">100</span></a></li>
-                <li><a>Carbohydates: <span class="badge rounded-pill bg-success">100</span></a></li>
-                <li><a>Fat: <span class="badge rounded-pill bg-warning">50</span></a></li>
-                <li><a>Calories: <span class="badge rounded-pill bg-secondary">200</span></a></li>
-            </ul>
+            </div>
         </div>
     </div>
 </div>

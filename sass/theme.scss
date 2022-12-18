@@ -28,6 +28,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  a.btn {
+    font-size: 1.3rem;
+  }
 }
 
 .navbar.navbar-expand-lg.navbar-dark {
@@ -60,9 +64,6 @@ body {
   }
 }
 
-.form-control {
-  font-size: 1.6rem;
-}
 
 .card {
   background: $color-light-1;
@@ -75,8 +76,12 @@ body {
   &-body {
     .nav {
       button {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
+    }
+
+    select.form-group {
+      font-size: 1.6rem !important;
     }
   }
 
@@ -120,12 +125,9 @@ body {
 
   & input {
     font-size: 1.6rem;
-
-    &[type=date] {
-      width: 30rem;
-      color: $color-gray;
-      margin-right: 1.6rem;
-    }
+  }
+  select {
+    font-size: 1.6rem;
   }
 }
 

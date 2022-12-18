@@ -7,7 +7,7 @@
 
     <title>Food Tracker | Day Details</title>
     <link href="{{ url_for('static', filename='/css/theme.css') }}" rel="stylesheet">
-
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 
 <body>
@@ -33,48 +33,100 @@
         </div>
     </div>
 </nav>
-<div class="container d-flex justify-content-center">
-    <div class="card d-inline-flex m-5">
-        <div class="card-header">
-            <h3 class="panel-title">January 28, 2017</h3>
-        </div>
-        <div class="card-body">
-            <form class="form-add-food" method="POST" action="/">
-                <div class="form-group">
-                    <label for="food-name-options">Food Name</label>
-                    <select id="food-name-options" class="form-control">
-                        <option>1</option>
-                        <option>1</option>
-                    </select>
-                </div>
-                <div class="d-grid gap-2">
-                    <button class="btn btn-primary my-4 text-light" type="submit">Add</button>
-                </div>
-            </form>
+<div class="container">
+    <div class="row">
+        <div class="col col-lg-8 mx-auto">
             <div class="card">
-                <div class="card-body">
-                    <ul class="nav">
-                        <li class="active"><a><span class="badge bg-secondary">Total</span></a></li>
-                        <li><a>Protein: <span class="badge rounded-pill bg-danger">100</span></a></li>
-                        <li><a>Carbohydates: <span class="badge rounded-pill bg-success">100</span></a></li>
-                        <li><a>Fat: <span class="badge rounded-pill bg-warning">50</span></a></li>
-                        <li><a>Calories: <span class="badge rounded-pill bg-secondary">200</span></a></li>
-                    </ul>
+                <div class="card-header">
+                    <h3 class="panel-title">January 28, 2017</h3>
                 </div>
-            </div>
-            <div class="card">
                 <div class="card-body">
-                    <ul class="nav">
-                        <li class="active"><a><span class="badge bg-secondary">Pizza</span></a></li>
-                        <li><a>Protein: <span class="badge rounded-pill bg-danger">100</span></a></li>
-                        <li><a>Carbohydates: <span class="badge rounded-pill bg-success">100</span></a></li>
-                        <li><a>Fat: <span class="badge rounded-pill bg-warning">50</span></a></li>
-                        <li><a>Calories: <span class="badge rounded-pill bg-secondary">200</span></a></li>
-                    </ul>
+                    <form>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <div class="d-grid gap-2 mt-3">
+                            <button class="btn btn-primary text-light text-uppercase" type="submit">Add</button>
+                        </div>
+                    </form>
+                    <div class="card mt-5">
+                        <div class="card-body">
+                            <ul class="nav">
+                                <li class="active"><a><span class="badge bg-info">Total</span></a></li>
+                                <li><a>Protein: <span class="badge rounded-pill bg-danger">100</span></a></li>
+                                <li><a>Carbohydates: <span class="badge rounded-pill bg-success">100</span></a></li>
+                                <li><a>Fat: <span class="badge rounded-pill bg-warning">50</span></a></li>
+                                <li><a>Calories: <span class="badge rounded-pill bg-secondary">200</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="nav">
+                                <li class="active"><a><span class="badge bg-secondary">Pizza</span></a></li>
+                                <li><a>Protein: <span class="badge rounded-pill bg-danger">100</span></a></li>
+                                <li><a>Carbohydates: <span class="badge rounded-pill bg-success">100</span></a></li>
+                                <li><a>Fat: <span class="badge rounded-pill bg-warning">50</span></a></li>
+                                <li><a>Calories: <span class="badge rounded-pill bg-secondary">200</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+{#    <div class="card m-5">#}
+{#        <div class="card-header">#}
+{#            <h3 class="panel-title">January 28, 2017</h3>#}
+{#        </div>#}
+{#        <div class="card-body">#}
+{#            <form class="form-add-food" method="POST" action="/">#}
+{#                <div class="form-group">#}
+{#                    <label for="food-name-options">Food Name</label>#}
+{#                    <select id="food-name-options" class="form-control">#}
+{#                        <option>1</option>#}
+{#                        <option>1</option>#}
+{#                    </select>#}
+{#                </div>#}
+{#                <select class="form-select" aria-label="Default select example">#}
+{#                    <option selected>Open this select menu</option>#}
+{#                    <option value="1">One</option>#}
+{#                    <option value="2">Two</option>#}
+{#                    <option value="3">Three</option>#}
+{#                </select>#}
+{#                <div class="d-grid gap-2">#}
+{#                    <button class="btn btn-primary my-4 text-light" type="submit">Add</button>#}
+{#                </div>#}
+{#            </form>#}
+{#            <div class="card">#}
+{#                <div class="card-body">#}
+{#                    <ul class="nav">#}
+{#                        <li class="active"><a><span class="badge bg-info">Total</span></a></li>#}
+{#                        <li><a>Protein: <span class="badge rounded-pill bg-danger">100</span></a></li>#}
+{#                        <li><a>Carbohydates: <span class="badge rounded-pill bg-success">100</span></a></li>#}
+{#                        <li><a>Fat: <span class="badge rounded-pill bg-warning">50</span></a></li>#}
+{#                        <li><a>Calories: <span class="badge rounded-pill bg-secondary">200</span></a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="card">#}
+{#                <div class="card-body">#}
+{#                    <ul class="nav">#}
+{#                        <li class="active"><a><span class="badge bg-secondary">Pizza</span></a></li>#}
+{#                        <li><a>Protein: <span class="badge rounded-pill bg-danger">100</span></a></li>#}
+{#                        <li><a>Carbohydates: <span class="badge rounded-pill bg-success">100</span></a></li>#}
+{#                        <li><a>Fat: <span class="badge rounded-pill bg-warning">50</span></a></li>#}
+{#                        <li><a>Calories: <span class="badge rounded-pill bg-secondary">200</span></a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 </div>
 <script src="{{ url_for('static', filename='/js/bootstrap.min.js') }}"></script>
 </body>

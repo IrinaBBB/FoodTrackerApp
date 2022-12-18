@@ -10785,6 +10785,9 @@ body {
   background-position: center;
   background-size: cover;
 }
+body a.btn {
+  font-size: 1.3rem;
+}
 
 .navbar.navbar-expand-lg.navbar-dark {
   background: #e2c5ff;
@@ -10811,10 +10814,6 @@ body {
   color: #a347ff;
 }
 
-.form-control {
-  font-size: 1.6rem;
-}
-
 .card {
   background: #f4eaff;
   font-size: 1.6rem;
@@ -10824,7 +10823,10 @@ body {
   justify-content: center;
 }
 .card-body .nav button {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+}
+.card-body select.form-group {
+  font-size: 1.6rem !important;
 }
 .card .btn.btn-link {
   font-size: 1.6rem;
@@ -10857,10 +10859,8 @@ body {
 .card input {
   font-size: 1.6rem;
 }
-.card input[type=date] {
-  width: 30rem;
-  color: #666;
-  margin-right: 1.6rem;
+.card select {
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=theme.css.map */
