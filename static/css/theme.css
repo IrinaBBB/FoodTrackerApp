@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico-Regular.ttf") format("ttf"), url("../fonts/Pacifico-Regular.woff") format("woff"), url("../fonts/Pacifico-Regular.woff2") format("woff2");
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(226, 197, 255, 0.6), rgba(226, 197, 255, 0.6)), url("../img/bg-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar.navbar-expand-lg.navbar-light {
+  background: #e2c5ff;
+}
+.navbar.navbar-expand-lg.navbar-light .navbar-brand {
+  color: #ffffff;
+  font-family: "Pacifico", sans-serif;
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+}
+.navbar.navbar-expand-lg.navbar-light .navbar-brand img {
+  width: 3.5rem;
+  margin-left: 1rem;
+}
+.navbar.navbar-expand-lg.navbar-light ul a {
+  color: #f4eaff;
+  font-size: 1.6rem;
+}
+.navbar.navbar-expand-lg.navbar-light ul a:hover {
+  color: #a347ff;
+}
+.navbar.navbar-expand-lg.navbar-light ul a.active {
+  color: #a347ff;
+}
+
+.container.container-content .card {
+  background: #f4eaff;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: #666;
+}
+.container.container-content .card:first-child {
+  margin-top: 1.2rem;
+}
+.container.container-content .card button {
+  font-size: 1.6rem;
+  margin-left: 1.6rem;
+  padding: 0.4rem 3rem;
+  text-transform: uppercase;
+}
+.container.container-content .card .form-date {
+  display: flex;
+  align-items: end;
+}
+.container.container-content .card input {
+  font-size: 1.6rem;
+}
+.container.container-content .card input[type=date] {
+  width: 30rem;
+  color: #666;
+}
+
+/*# sourceMappingURL=theme.css.map */

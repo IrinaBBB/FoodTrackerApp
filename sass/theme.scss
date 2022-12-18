@@ -1,0 +1,92 @@
+$color-main-1: #e2c5ff;
+$color-main-2: #ffc6e3;
+$color-dark: #a347ff;
+$color-light: #ffffff;
+$color-light-1: #f4eaff;
+$color-gray: #666;
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../fonts/Pacifico-Regular.ttf') format('ttf'),
+  url('../fonts/Pacifico-Regular.woff') format('woff'),
+  url('../fonts/Pacifico-Regular.woff2') format('woff2');
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba($color-main-1, 0.6), rgba($color-main-1, 0.6)),
+  url("../img/bg-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar.navbar-expand-lg.navbar-light {
+  background: $color-main-1;
+
+  .navbar-brand {
+    color: $color-light;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 3.5rem;
+      margin-left: 1rem;
+    }
+  }
+
+  ul a {
+    color: $color-light-1;
+    font-size: 1.6rem;
+
+    &:hover {
+      color: $color-dark;
+    }
+
+    &.active {
+      color: $color-dark;
+    }
+  }
+}
+
+.container.container-content {
+
+  .card {
+    background: $color-light-1;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    color: $color-gray;
+    &:first-child {
+      margin-top: 1.2rem;
+    }
+
+    button {
+      font-size: 1.6rem;
+      margin-left: 1.6rem;
+      padding: .4rem 3rem;
+      text-transform: uppercase;
+    }
+
+    .form-date {
+      display: flex;
+      align-items: end;
+    }
+
+    & input {
+      font-size: 1.6rem;
+
+      &[type=date] {
+        width: 30rem;
+        color: $color-gray;
+      }
+    }
+  }
+}
+
+
