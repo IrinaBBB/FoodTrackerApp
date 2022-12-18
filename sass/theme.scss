@@ -5,6 +5,10 @@ $color-light: #ffffff;
 $color-light-1: #f4eaff;
 $color-gray: #666;
 
+$primary: $color-dark;
+
+@import "vendor/bootstrap";
+
 @font-face {
   font-family: 'Pacifico';
   src: url('../fonts/Pacifico-Regular.ttf') format('ttf'),
@@ -17,6 +21,7 @@ html {
 }
 
 body {
+  font-size: 1.6rem;
   min-height: 100vh;
   background-image: linear-gradient(to right bottom, rgba($color-main-1, 0.6), rgba($color-main-1, 0.6)),
   url("../img/bg-2.jpg");
@@ -25,7 +30,7 @@ body {
   background-size: cover;
 }
 
-.navbar.navbar-expand-lg.navbar-light {
+.navbar.navbar-expand-lg.navbar-dark {
   background: $color-main-1;
 
   .navbar-brand {
@@ -55,38 +60,74 @@ body {
   }
 }
 
-.container.container-content {
+.form-control {
+  font-size: 1.6rem;
+}
 
-  .card {
-    background: $color-light-1;
-    font-size: 1.6rem;
-    margin-bottom: 1.2rem;
-    color: $color-gray;
-    &:first-child {
-      margin-top: 1.2rem;
-    }
+.card {
+  background: $color-light-1;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: $color-gray;
+  display: flex;
+  justify-content: center;
 
-    button {
-      font-size: 1.6rem;
-      margin-left: 1.6rem;
-      padding: .4rem 3rem;
-      text-transform: uppercase;
-    }
-
-    .form-date {
-      display: flex;
-      align-items: end;
-    }
-
-    & input {
-      font-size: 1.6rem;
-
-      &[type=date] {
-        width: 30rem;
-        color: $color-gray;
+  &-body {
+    .nav {
+      button {
+        font-size: 1.3rem;
       }
     }
   }
+
+  .btn.btn-link {
+    font-size: 1.6rem;
+  }
+
+  li {
+    margin-right: 1.5rem;
+  }
+
+  &-body {
+    justify-content: center;
+
+    button {
+      font-size: 1.6rem;
+    }
+  }
+
+  &:first-child {
+    margin-top: 1.2rem;
+  }
+
+  .form-date {
+    display: flex;
+    align-items: end;
+  }
+
+  .form-group.date-picker {
+    & + button {
+      font-size: 1.6rem;
+      padding: .4rem 3rem;
+      text-transform: uppercase;
+      color: white !important;
+    }
+  }
+
+  form.form-add-food {
+    width: 75rem;
+  }
+
+  & input {
+    font-size: 1.6rem;
+
+    &[type=date] {
+      width: 30rem;
+      color: $color-gray;
+      margin-right: 1.6rem;
+    }
+  }
 }
+
 
 
