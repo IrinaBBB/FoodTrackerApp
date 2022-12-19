@@ -42,38 +42,46 @@
                     <h3 class="panel-title">January 28, 2017</h3>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form method="post" action="{{ url_for('add') }}">
                         <div class="mb-3">
                             <label for="foodName" class="form-label">Food Name</label>
-                            <input class="form-control" id="foodName">
+                            <input name="food-name" class="form-control" id="foodName">
                         </div>
                         <div class="mb-3">
                             <label for="protein" class="form-label">Protein</label>
-                            <input type="number" class="form-control" id="protein">
+                            <input name="protein" type="number" class="form-control" id="protein">
                         </div>
                         <div class="mb-3">
                             <label for="carbohydrates" class="form-label">Carbohydrates</label>
-                            <input type="number" class="form-control" id="carbohydrates">
+                            <input name="carbohydrates" type="number" class="form-control" id="carbohydrates">
                         </div>
                         <div class="mb-3">
                             <label for="fat" class="form-label">Fat</label>
-                            <input type="number" class="form-control" id="fat">
+                            <input name="fat" type="number" class="form-control" id="fat">
                         </div>
                         <div class="d-grid gap-2 mt-3">
                             <button class="btn btn-primary text-light text-uppercase" type="submit">Add</button>
                         </div>
                     </form>
-                    <div class="card mt-3">
-                        <div class="card-body">
-                            <ul class="nav">
-                                <li class="active"><a><span class="badge bg-secondary">Pizza</span></a></li>
-                                <li><a>Protein: <span class="badge rounded-pill bg-danger">100</span></a></li>
-                                <li><a>Carbohydates: <span class="badge rounded-pill bg-success">100</span></a></li>
-                                <li><a>Fat: <span class="badge rounded-pill bg-warning">50</span></a></li>
-                                <li><a>Calories: <span class="badge rounded-pill bg-secondary">200</span></a></li>
-                            </ul>
+                    {% for food in results %}
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <ul class="nav">
+                                    <li class="active"><a><span class="badge bg-secondary">{{ food.name }}</span></a>
+                                    </li>
+                                    <li><a>Protein: <span class="badge rounded-pill bg-danger">{{ food.protein }}</span></a>
+                                    </li>
+                                    <li><a>Carbohydates: <span
+                                            class="badge rounded-pill bg-success">{{ food.carbohydrates }}</span></a>
+                                    </li>
+                                    <li><a>Fat: <span class="badge rounded-pill bg-warning">{{ food.fat }}</span></a>
+                                    </li>
+                                    <li><a>Calories: <span
+                                            class="badge rounded-pill bg-secondary">{{ food.calories }}</span></a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
